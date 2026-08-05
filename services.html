@@ -1,228 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programs - Mulberry Institute of Hospitality</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .hero-slider {
-            position: relative;
-            height: 320px;
-            overflow: hidden;
-        }
-
-        .hero-slider img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            transition: opacity 1.2s ease-in-out;
-        }
-
-        .hero-slider img.active {
-            opacity: 1;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(rgba(91, 75, 138, 0.75), rgba(124, 106, 168, 0.75));
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs - Mulberry Institute of Hospitality</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hero-slider {
+      position: relative;
+      height: 320px;
+      overflow: hidden;
+    }
+    .hero-slider img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+    }
+    .hero-slider img.active {
+      opacity: 1;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(91, 75, 138, 0.75), rgba(124, 106, 168, 0.75));
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
 </head>
-
 <body class="font-sans bg-gray-50">
 
-    <!-- HEADER WITH MOBILE MENU -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-purple-800">Mulberry Institute</a>
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-purple-800">Mulberry Institute</a>
 
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700">
-                <a href="index.html" class="hover:text-purple-700">Home</a>
-                <a href="about.html" class="hover:text-purple-700">About</a>
-                <a href="services.html" class="text-purple-700 font-semibold">Programs</a>
-                <a href="courses.html" class="hover:text-purple-700">Courses</a>
-                <a href="contact.html" class="hover:text-purple-700">Contact</a>
-                <a href="contact.html"
-                    class="bg-purple-700 text-white px-4 py-2 rounded-md hover:bg-purple-800 transition">Enquire Now</a>
-            </nav>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700">
+        <a href="index.html" class="hover:text-purple-700">Home</a>
+        <a href="about.html" class="hover:text-purple-700">About</a>
+        <a href="services.html" class="text-purple-700 font-semibold">Programs</a>
+        <a href="courses.html" class="hover:text-purple-700">Courses</a>
+        <a href="contact.html" class="hover:text-purple-700">Contact</a>
+        <a href="contact.html" class="bg-purple-700 text-white px-4 py-2 rounded-md hover:bg-purple-800 transition">Enquire Now</a>
+      </nav>
 
-            <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </button>
-        </div>
-
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-4 py-3 space-y-3 text-sm font-medium text-gray-700">
-                <a href="index.html" class="block hover:text-purple-700">Home</a>
-                <a href="about.html" class="block hover:text-purple-700">About</a>
-                <a href="services.html" class="block text-purple-700 font-semibold">Programs</a>
-                <a href="courses.html" class="block hover:text-purple-700">Courses</a>
-                <a href="contact.html" class="block hover:text-purple-700">Contact</a>
-                <a href="contact.html" class="block bg-purple-700 text-white text-center py-2 rounded-md mt-2">Enquire
-                    Now</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- HERO SLIDESHOW -->
-    <section class="hero-slider">
-        <div class="hero-overlay"></div>
-        <img src="images/kitchen-training.jpg" class="active" alt="Kitchen Training">
-        <img src="images/group-photo.jpg" alt="Students Group">
-        <img src="images/chefs-team.png" alt="Chefs Team">
-        <img src="images/dessert-class.jpg" alt="Dessert Class">
-        <div class="hero-content h-full flex items-center justify-center text-center text-white px-4">
-            <div>
-                <h1 class="text-3xl md:text-4xl font-bold mb-3">Our Programs</h1>
-                <p class="text-lg opacity-90">Comprehensive culinary education designed to prepare you for a successful
-                    international career.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- MAIN PROGRAMS -->
-    <section class="py-16">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-3">What We Offer</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">From foundational skills to advanced leadership training — we
-                    provide complete support for your culinary journey.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <img src="images/kitchen-training.jpg" alt="Practical Culinary Training"
-                        class="w-full h-52 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Practical Culinary Training</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Hands-on training in modern commercial
-                            kitchens under the guidance of experienced chef instructors.</p>
-                        <a href="courses.html" class="text-purple-700 font-medium hover:underline text-sm">Learn more
-                            →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <img src="images/chefs-team.png" alt="Professional Chef Development"
-                        class="w-full h-52 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Professional Chef Development</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Structured programs from Certificate to
-                            Advanced Diploma level that help students progress to leadership roles.</p>
-                        <a href="courses.html" class="text-purple-700 font-medium hover:underline text-sm">Learn more
-                            →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <img src="images/dessert-class.jpg" alt="International Certification"
-                        class="w-full h-52 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">International Certification</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Globally recognized qualifications (City &
-                            Guilds and Australian accreditation) that open doors worldwide.</p>
-                        <a href="courses.html" class="text-purple-700 font-medium hover:underline text-sm">Learn more
-                            →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <img src="images/group-photo.jpg" alt="Career & Placement Support" class="w-full h-52 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Career & Placement Support</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Dedicated placement assistance to help
-                            students find opportunities in Nepal, Dubai, Australia, Japan and more.</p>
-                        <a href="contact.html" class="text-purple-700 font-medium hover:underline text-sm">Learn more
-                            →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl shadow-md p-8 md:p-10">
-                <h2 class="text-2xl font-bold text-gray-800 text-center mb-8">Additional Benefits</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div>
-                        <div class="text-3xl font-bold text-purple-700 mb-2">100%</div>
-                        <p class="text-gray-600 text-sm">Placement Assistance</p>
-                    </div>
-                    <div>
-                        <div class="text-3xl font-bold text-purple-700 mb-2">Global</div>
-                        <p class="text-gray-600 text-sm">Recognized Certificates</p>
-                    </div>
-                    <div>
-                        <div class="text-3xl font-bold text-purple-700 mb-2">Experienced</div>
-                        <p class="text-gray-600 text-sm">Chef Instructors</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="py-14 bg-purple-800 text-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to join one of our programs?</h2>
-            <p class="mb-8 opacity-90">Explore our courses or send an enquiry to get started.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="courses.html"
-                    class="bg-white text-purple-800 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition">View
-                    Courses</a>
-                <a href="contact.html"
-                    class="bg-green-500 text-white font-semibold px-8 py-3 rounded-md hover:bg-green-600 transition">Enquire
-                    Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-gray-900 text-white py-10">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <div class="text-xl font-bold mb-2">Mulberry Institute of Hospitality</div>
-            <p class="text-gray-400 text-sm mb-4">Creating Excellence in Hospitality</p>
-            <p class="text-gray-500 text-sm">© 2026 Mulberry Institute. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- WhatsApp -->
-    <a href="https://wa.me/9779845116480" target="_blank"
-        class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg z-50">
-        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-            <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
-    </a>
+      </button>
+    </div>
 
-    <script>
-        // Slideshow
-        const slides = document.querySelectorAll('.hero-slider img');
-        let current = 0;
-        setInterval(() => {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
-        }, 4000);
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="px-4 py-3 space-y-3 text-sm font-medium text-gray-700">
+        <a href="index.html" class="block hover:text-purple-700">Home</a>
+        <a href="about.html" class="block hover:text-purple-700">About</a>
+        <a href="services.html" class="block text-purple-700 font-semibold">Programs</a>
+        <a href="courses.html" class="block hover:text-purple-700">Courses</a>
+        <a href="contact.html" class="block hover:text-purple-700">Contact</a>
+        <a href="contact.html" class="block bg-purple-700 text-white text-center py-2 rounded-md mt-2">Enquire Now</a>
+      </div>
+    </div>
+  </header>
 
-        // Mobile Menu
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+  <!-- HERO SLIDESHOW -->
+  <section class="hero-slider">
+    <div class="hero-overlay"></div>
+    <img src="kitchen-training.jpg" class="active" alt="Kitchen Training">
+    <img src="group-photo.jpg" alt="Students Group">
+    <img src="chefs-team.png" alt="Chefs Team">
+    <img src="dessert-class.jpg" alt="Dessert Class">
+    <div class="hero-content h-full flex items-center justify-center text-center text-white px-4">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-bold mb-3">Our Programs</h1>
+        <p class="text-lg opacity-90">Comprehensive culinary education designed to prepare you for a successful international career.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN PROGRAMS -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-3">What We Offer</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">From foundational skills to advanced leadership training — we provide complete support for your culinary journey.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+          <img src="kitchen-training.jpg" alt="Practical Culinary Training" class="w-full h-52 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Practical Culinary Training</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">Hands-on training in modern commercial kitchens under the guidance of experienced chef instructors.</p>
+            <a href="courses.html" class="text-purple-700 font-medium hover:underline text-sm">Learn more →</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+          <img src="chefs-team.png" alt="Professional Chef Development" class="w-full h-52 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Professional Chef Development</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">Structured programs from Certificate to Advanced Diploma level that help students progress to leadership roles.</p>
+            <a href="courses.html" class="text-purple-700 font-medium hover:underline text-sm">Learn more →</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+          <img src="dessert-class.jpg" alt="International Certification" class="w-full h-52 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">International Certification</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">Globally recognized qualifications (City & Guilds and Australian accreditation) that open doors worldwide.</p>
+            <a href="courses.html" class="text-purple-700 font-medium hover:underline text-sm">Learn more →</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+          <img src="group-photo.jpg" alt="Career & Placement Support" class="w-full h-52 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Career & Placement Support</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">Dedicated placement assistance to help students find opportunities in Nepal, Dubai, Australia, Japan and more.</p>
+            <a href="contact.html" class="text-purple-700 font-medium hover:underline text-sm">Learn more →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-8 md:p-10">
+        <h2 class="text-2xl font-bold text-gray-800 text-center mb-8">Additional Benefits</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div>
+            <div class="text-3xl font-bold text-purple-700 mb-2">100%</div>
+            <p class="text-gray-600 text-sm">Placement Assistance</p>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-purple-700 mb-2">Global</div>
+            <p class="text-gray-600 text-sm">Recognized Certificates</p>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-purple-700 mb-2">Experienced</div>
+            <p class="text-gray-600 text-sm">Chef Instructors</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-14 bg-purple-800 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to join one of our programs?</h2>
+      <p class="mb-8 opacity-90">Explore our courses or send an enquiry to get started.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="courses.html" class="bg-white text-purple-800 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition">View Courses</a>
+        <a href="contact.html" class="bg-green-500 text-white font-semibold px-8 py-3 rounded-md hover:bg-green-600 transition">Enquire Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-10">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <div class="text-xl font-bold mb-2">Mulberry Institute of Hospitality</div>
+      <p class="text-gray-400 text-sm mb-4">Creating Excellence in Hospitality</p>
+      <p class="text-gray-500 text-sm">© 2026 Mulberry Institute. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/9779845116480" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg z-50">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    const slides = document.querySelectorAll('.hero-slider img');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 4000);
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
-
 </html>
